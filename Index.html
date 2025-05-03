@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+
+<body>
+  Hello world
+  <a-scene>
+    <a-camera>
+      <a-cursor color="black"></a-cursor>
+    </a-camera>
+    //playground
+    <a-sky color="pink"></a-sky>
+    <a-box position="-1 1 -6" 
+           animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"
+           color="#4CC3D9"
+           cursor-listener
+           draggable></a-box>
+    <a-sphere position="3 3 -6" radius="1.25" color="#EF2D5E"
+              animation="<a-camera movement-controls>
+  <a-cursor color="black"></a-cursor>
+</a-camera><property: scale; to: 1.2 1.2 1.2; dir: alternate; dur: 500; loop: true
+              animation__2="property: color; to: #00ff00; dir: alternate; dur: 2000; loop: true"
+              animation__3="property: opacity; to: 1; dir: alternate; dur: 5000; loop: true">
+    </a-sphere>
+    <a-plane position="0 0 -7" rotation="-90 0 0" width="6" height="6" color="#7BC8A4"></a-plane>
+    //pilasters of playground
+    <a-cylinder position="-2.8 1.6 -4.1" height="3" radius="0.2" color="black"></a-cylinder>
+    <a-cylinder position="2.7 1.6 -4.1" height="3" radius="0.2" color="black"></a-cylinder>
+    
+    <a-cone position="2 0.75 -6" radius-bottom="0.5" radius-top="0" height="1.5" color="#FF65D7" cursor-listener></a-cone>
+    <a-torus position="-3 1.50 -8" radius="1.25" color="green" animation="property: rotation; to: 0 360 0; loop: true; dur: 7000" cursor-listener></a-torus>
+    <a-text value="Welcome to the playground!" position="-2.2 2 -4.5" color="black"></a-text>
+    <a-light type="point" intensity="2.5" position="2 4 4"></a-light>
+    <a-box position="1 1 -7" color="brown">  </a-box>
+    <a-text value="Playground" position="-2 2 -2" color="red"></a-text>
+    <a-text value="House --->" position="1 2 -2" color="red">  </a-text>
+    <a-light intensity="0.5" position="2 4 4"></a-light>
+    <!-- House structure with solid walls -->
+    <a-box position="25 2 2" width="9" height="4" depth="8" color="yellow" material="opacity: 1"></a-box>
+    <!-- Roof -->
+    <a-entity position="25 4.8 2">
+      <a-cone position="0 0.5 0" radius-bottom="7" radius-top="1" height="4" color="#8B0000" material="opacity: 1"></a-cone>
+    </a-entity>
+    <!-- Door with frame and doorknob -->
+    <a-entity position="25 1.5 6.1" rotation="0 0 0" 
+              door-animation>
+      <a-box id="door" 
+             position="1 0 0" 
+             width="2" height="3" depth="0.1" 
+             color="#8B4513">
+      </a-box>
+      <a-box position="1 0 0.05" 
+             width="1.8" height="2.8" depth="0.05" 
+             color="#A0522D">
+      </a-box>
+      <a-sphere position="1.6 0 0.1" 
+                radius="0.1" 
+                color="#DAA520">
+      </a-sphere>
+    </a-entity>
+    <!-- Windows -->
+    <a-box position="22 2.5 6.1" width="1.5" height="1.5" depth="0.1" color="#87CEEB"></a-box>
+    <a-box position="28 2.5 6.1" width="1.5" height="1.5" depth="0.1" color="#87CEEB"></a-box>
+    <!-- Foundation -->
+    <a-box position="25 0 2" width="9.5" height="0.1" depth="8.5" color="#8B4513"></a-box>
+    <a-light ty<a-cone id="playgroundCone" position="2 0.75 -6" radius-bottom="0.5" radius-top="0" height="1.5" color="#FF65D7" cursor-listener></a-cone>
+
+
+      
+  </a-scene>
+  <script src="script.js"></script>
+</body>
+
+</html>
